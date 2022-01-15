@@ -8,7 +8,7 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class HomeComponent implements OnInit {
 
-  nombre: string = "Nombre Usuario";
+  nombrePadre: string = "Nombre Usuario";
 
   constructor(
     private dataService: DataService 
@@ -17,13 +17,13 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  cambiarNombre(): void {
-    this.nombre = 'Sebastian';
-    this.dataService.nombreUsuario = this.nombre;
+  cambiarNombrePadre(): void {
+    this.nombrePadre = 'Sebastian';
+    this.dataService.nombreUsuario = this.nombrePadre;
   }
 
   hijoCambioNombre(nuevoNombre: string) {
-    this.nombre = nuevoNombre;
+    this.nombrePadre = nuevoNombre;
     this.dataService.nombreUsuario = nuevoNombre;
   }
 

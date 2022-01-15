@@ -2,13 +2,17 @@
 <h1>Home Component</h1>
 <hr>
 
-<h3>{{ nombre }}</h3>
+<h3>{{ nombrePadre }}</h3>
 
 <button class="btn btn-primary"
-    (click)="cambiarNombre()">
+    (click)="cambiarNombrePadre()">
     Cambiar Nombre
 </button>
 
 <hr>
 
-<app-hijo [nombreExtrano]="nombre" (cambioNombre)="hijoCambioNombre($event)"></app-hijo>
+<app-hijo 
+    [nombreExtrano]="nombrePadre" 
+    (cambioNombreHijo)="hijoCambioNombre($event)"
+>
+</app-hijo>

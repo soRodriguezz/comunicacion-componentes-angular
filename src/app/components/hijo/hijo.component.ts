@@ -9,7 +9,7 @@ import { DataService } from 'src/app/services/data.service';
 export class HijoComponent implements OnInit {
 
   @Input('nombreExtrano') nombreHijo: string = 'Sin nombre';
-  @Output('cambioNombre') cambioNombreHijo = new EventEmitter<string>();
+  @Output('cambioNombreHijo') cambioNombreHijo = new EventEmitter<string>();
 
   constructor( 
     // private dataService: DataService
